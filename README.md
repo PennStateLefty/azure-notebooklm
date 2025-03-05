@@ -8,6 +8,12 @@ See original [Open NotebookLM](https://github.com/gabrielchua/open-notebooklm) f
 
 ![Azure NotebookLM](./azure-notebooklm.png)
 
+## Updates
+
+Changes from the original Azure NotebookLM are mainly limited to the notebooks for each of experimentation. 
+1. Added a gen_0_sample-report.ipynb: This notebook uses gpt-4o-mini to create a series of related updates for a project according to the system prompt
+2. Changes made to gen_2_dialog.ipynb: Changes were made to allow an initial pass of the whole set of updates to the LLM and have it return a JSON object reflecting key topics, risks, activities, and resolutions. That is then fed as an input to another LLM call where the script is created.
+
 ## Prep
 
 Provision following Azure resouces before running the app.
