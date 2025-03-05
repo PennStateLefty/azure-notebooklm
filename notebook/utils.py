@@ -54,6 +54,20 @@ class MediumDialogue(BaseModel):
         ..., description="A list of dialogue items, typically between 29 to 39 items"
     )
 
+class TopicItem(BaseModel):
+    """A single topic item."""
+    date: str
+    subject: str
+    activity: str
+    risks: List[str]
+    resolutions: List[str]
+class Topics(BaseModel):
+    """A class to represent topics with date, subject, activity, risks, and resolutions."""
+
+    topics: List[TopicItem] = Field(
+        ..., description="A list of topic items"
+    )
+
 JSON_RETRY_ATTEMPTS = 3
 
 # Initialize clients
